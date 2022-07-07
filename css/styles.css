@@ -16,6 +16,7 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	color: var(--prime-color);
+	letter-spacing: 0.03em;
 }
 
 /* reset */
@@ -262,7 +263,35 @@ img {
 	margin-right: 30px;
 }
 
-.peculiarities .peculiarities-title {
+.peculiarities-item::before {
+	display: block;
+	margin-bottom: 30px;
+	height: 120px;
+	content: "";
+	background-color: var(--second-bg-color);
+	background-size: 70px 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 4px;
+}
+
+.peculiarities-item:nth-child(1)::before {
+	background-image: url(../icons/peculiarities/antenna.svg);
+}
+
+.peculiarities-item:nth-child(2)::before {
+	background-image: url(../icons/peculiarities/clock.svg);
+}
+
+.peculiarities-item:nth-child(3)::before {
+	background-image: url(../icons/peculiarities/diagram.svg);
+}
+
+.peculiarities-item:nth-child(4)::before {
+	background-image: url(../icons/peculiarities/astronaut.svg);
+}
+
+.peculiarities-title {
 	margin-bottom: 10px;
 	font-weight: 700;
 	font-size: 14px;
@@ -272,11 +301,11 @@ img {
 	letter-spacing: 0.03em;
 }
 
-.peculiarities .peculiarities-descr {
-	max-width: 250px;
+.peculiarities-descr {
 	font-size: 14px;
 	line-height: 1.71;
 	color: var(--grey-text);
+	letter-spacing: 0.03em;
 }
 
 /* Doing section */
@@ -444,24 +473,67 @@ img {
 	list-style: none;
 }
 
-.social-link {
-	display: inline-block;
+.social-item {
 	text-decoration: none;
-	padding: 12px;
 	width: 44px;
 	height: 44px;
 	background-color: rgba(255, 255, 255, 0.1);
+	background-position: center;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
 	border-radius: 50%;
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-link {
+	display: block;
+	width: 44px;
+	height: 44px;
+}
+
+/* Footer socials */
+.social-item:nth-child(1){
+	background-image: url(../icons/socials/footer/instagram.svg);
+}
+
+.social-item:nth-child(2){
+	background-image: url(../icons/socials/footer/twitter.svg);
+}
+
+.social-item:nth-child(3){
+	background-image: url(../icons/socials/footer/facebook.svg);
+}
+
+.social-item:nth-child(4){
+	background-image: url(../icons/socials/footer/linkedin.svg);
+}
+
+.social-item:hover,
+.social-item:focus {
 	background-color: var(--active-color);
 }
 
 .social-item:not(:last-child) {
 	margin-right: 10px;
 }
+
+/* Team-member socials */
+
+.team-member .social-item:nth-child(1){
+	background-image: url(../icons/socials/member/instagram-m.svg);
+}
+
+.team-member .social-item:nth-child(2){
+	background-image: url(../icons/socials/member/twitter-m.svg);
+}
+
+.team-member .social-item:nth-child(3){
+	background-image: url(../icons/socials/member/facebook-m.svg);
+}
+
+.team-member .social-item:nth-child(4){
+	background-image: url(../icons/socials/member/linkedin-m.svg);
+}
+
 /* Portfolio page and section */
 
 /* Filter buttons */
