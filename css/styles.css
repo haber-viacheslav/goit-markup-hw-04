@@ -271,8 +271,10 @@ img {
 }
 
 .peculiarities-thumb {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 30px;
-	padding: 25px 100px;
 	width: 270px;
 	height: 120px;
 	background-color: var(--second-bg-color);
@@ -552,8 +554,12 @@ img {
 	flex-basis: calc((100% - 60px) / 3);
 }
 
-.work-card:hover,
-.work-card:focus {
+.work-link {
+	text-decoration: none;
+	display: block;
+}
+.work-link:hover,
+.work-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -575,9 +581,7 @@ img {
 	border-right: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
 }
-.work-link {
-	text-decoration: none;
-}
+
 
 .work-img {
 	display: block;
